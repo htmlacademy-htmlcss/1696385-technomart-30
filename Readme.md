@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Евгений Хорунжий](https://up.htmlacademy.ru/htmlcss/30/user/1696385).
-* Наставник: [Алёна Сиприкова].(https://htmlacademy.ru/profile/asiprikova)
+* Наставник: [Алёна Сиприкова](https://htmlacademy.ru/profile/asiprikova).
 
 ---
 
