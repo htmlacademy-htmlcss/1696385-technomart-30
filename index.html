@@ -10,9 +10,8 @@
   <header>
     <div>
       <a><img src="https://via.placeholder.com/220x47" alt="Логотип компании"></a>
-      <form action="https://echo.htmlacademy.ru/">
-        <input type="image" src="https://via.placeholder.com/17x17" alt="Нажмите для поиска" name="search" formmethod="GET">
-        <!--Сделал тут не так как ты написала, но все работает. Кнопка при нажатии отправляет данные, которые ввели в поле поиска. Инфу взял с mdn, так что думаю так можно было сделать.-->
+      <form action="https://echo.htmlacademy.ru/" method="GET">
+        <button type="submit"></button>
         <input type="search" name="search" placeholder="Поиск:">
       </form>
       <a href="#"><img src="https://via.placeholder.com/14x16" alt="">Закладки: <span>0</span>></a>
@@ -21,7 +20,7 @@
     </div>
     <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
     <div>
-      <a href="tel:+78125550555"><img src="https://via.placeholder.com/15x15" alt="">+7(812)555-05-55</a>
+      <a href="tel:+78125550555">+7(812)555-05-55</a>
       <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
     </div>
     <section>
@@ -50,33 +49,23 @@
       <!--Эти секционные заголовки позже будем прятать-->
       <div>
         <h3>Материалы</h3>
-        <div>
-          <a href="#">На любой вкус</a>
-        </div>
+        <a href="#">На любой вкус</a>
       </div>
       <div>
         <h3>Инструмент</h3>
-        <div>
-          <a href="#">На все случаи</a>
-        </div>
+        <a href="#">На все случаи</a>
       </div>
       <div>
         <h3>Техника</h3>
-        <div>
-          <a href="#">Для стройки</a>
-        </div>
+        <a href="#">Для стройки</a>
       </div>
       <div>
         <h3>Скидки 50%</h3>
-        <div>
-          <a href="#">На 350 товаров</a>
-        </div>
+        <a href="#">На 350 товаров</a>
       </div>
       <div>
         <h3>Доставка</h3>
-        <div>
-          <a href="#">Бесплатно</a>
-        </div>
+        <a href="#">Бесплатно</a>
       </div>
       <div>
         <div>
@@ -144,7 +133,7 @@
               <div>
                 <img src="https://via.placeholder.com/70x70" alt="">
               </div>
-              <h3>Перфоратор BOSCH<br>3000 BFG</h3>
+              <h3>Перфоратор BOSCH 3000 BFG</h3>
               <del><span>22500 Р.</span></del>
               <a href="#">15500 Р.</a>
             </div>
@@ -160,7 +149,7 @@
               <div>
                 <img src="https://via.placeholder.com/144x128" alt="Перфоратор BOSCH 6000 BFG">
               </div>
-              <h3>Перфоратор BOSCH<br>6000 BFG</h3>
+              <h3>Перфоратор BOSCH 6000 BFG</h3>
               <del><span>30500 Р.</span></del>
               <a href="#">25500 Р.</a>
             </div>
@@ -179,7 +168,8 @@
               <div>
                 <img src="https://via.placeholder.com/70x70" alt="">
               </div>
-              <h3>Перфоратор BOSCH<br>2000 BFG</h3>
+              <h3>Перфоратор BOSCH 2000 BFG</h3>
+              <!--Попробовал вместо &lt;br&gt; использовать &amp;NewLine&semi;. В браузере ничего не переносится. Пока оставил без переносов. Возможно ли в этом случае воспользоваться тегом &lt;pre&gt;?-->
               <del><span>22500 Р.</span></del>
               <a href="#">12500 Р.</a>
             </div>
@@ -218,20 +208,17 @@
             <h3>Доставка</h3>
             <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы
               неплохо заработаем, поднимая его на ваш этаж!</p>
-            <img src="https://via.placeholder.com/468x261" alt="">
           </div>
           <div id="tab-2">
             <h3>Гарантия</h3>
             <p>Если купленный у нас товар поломается или заискрит, а так же в случае пожара, спровацированного
               его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на
               новый. Дом уж восстановите как-нибудь сами.</p>
-            <img src="https://via.placeholder.com/389x283" alt="">
           </div>
           <div id="tab-3">
             <h3>Кредит</h3>
             <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
             <a href="#">Отправить заявку</a>
-            <img src="https://via.placeholder.com/465x285" alt="">
           </div>
         </div>
       </div>
