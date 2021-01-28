@@ -3,19 +3,23 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <title>Интернет-магазин Техномарт</title>
 </head>
 
 <body>
   <header>
     <div>
-      <a><img src="https://via.placeholder.com/220x47" alt="Логотип компании"></a>
+      <a href="#"><img src="img/logo/logo-header.svg" width="108" height="18" alt="Логотип компании"></a>
       <form action="https://echo.htmlacademy.ru/" method="GET">
         <button type="submit"></button>
         <input type="search" name="search" placeholder="Поиск:">
       </form>
-      <a href="#"><img src="https://via.placeholder.com/14x16" alt="">Закладки: <span>0</span>></a>
-      <a href="#"><img src="https://via.placeholder.com/15x15" alt="">Корзина: <span>0</span>></a>
+      <a href="#">Закладки: <span>0</span>></a>
+      <a href="#">Корзина: <span>0</span>></a>
       <a href="#">Оформить заказ</a>
     </div>
     <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
@@ -26,7 +30,7 @@
     <section>
       <h2>Авторизация</h2>
       <!--Эти секционные заголовки позже будем прятать-->
-      <p><a href="#"><img src="https://via.placeholder.com/20x17" alt="">Войти</a></p>
+      <p><a href="#">Войти</a></p>
       <p><a href="#">Регистрация</a></p>
     </section>
     <nav>
@@ -70,7 +74,8 @@
       <div>
         <div>
           <div>
-            <!--Здесь будет фоновая картинка-->
+            <img src="img/slider/img-slider1.jpg" width="620" height="266"
+              alt="Профессионал использует перфоратор марки BOSCH на производстве">
             <div>
               <h3>Перфораторы</h3>
               <p>Настоящие мужские игрушки</p>
@@ -78,7 +83,8 @@
             <a href="catalog.html">Открыть каталог</a>
           </div>
           <div>
-            <!--Здесь будет фоновая картинка-->
+            <img src="img/slider/img-slider2.jpg" width="620" height="266"
+              alt="Профессионал использует дрель марки BOSCH на производстве">
             <div>
               <h3>Дрели</h3>
               <p>Соседям на радость!</p>
@@ -108,11 +114,12 @@
           <article>
             <div>
               <div>
-                <a href="#"><img src="https://via.placeholder.com/15x15" alt="">Купить</a>
+                <a href="#">Купить</a>
                 <a href="#">В закладки</a>
               </div>
               <div>
-                <img src="https://via.placeholder.com/184x64" alt="Перфоратор BOSCH 9000 BFG">
+                <img src="img/content-image/bosch-bng-9000.jpg" width="184" height="164"
+                  alt="Перфоратор BOSCH 9000 BFG">
               </div>
               <h3>Перфоратор BOSCH 9000 BFG</h3>
               <del><span>32500 Р.</span></del>
@@ -124,14 +131,14 @@
           <article>
             <div>
               <div>
-                <a href="#"><img src="https://via.placeholder.com/15x15" alt="">Купить</a>
+                <a href="#">Купить</a>
                 <a href="#">В закладки</a>
               </div>
               <div>
-                <img src="https://via.placeholder.com/127x112" alt="Перфоратор BOSCH 3000BFG">
+                <img src="img/content-image/bosch-bng-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH 3000BFG">
               </div>
               <div>
-                <img src="https://via.placeholder.com/70x70" alt="">
+                <img src="https://via.placeholder.com/70x70" alt="Новинка">
               </div>
               <h3>Перфоратор BOSCH 3000 BFG</h3>
               <del><span>22500 Р.</span></del>
@@ -143,11 +150,12 @@
           <article>
             <div>
               <div>
-                <a href="#"><img src="https://via.placeholder.com/15x15" alt="">Купить</a>
+                <a href="#">Купить</a>
                 <a href="#">В закладки</a>
               </div>
               <div>
-                <img src="https://via.placeholder.com/144x128" alt="Перфоратор BOSCH 6000 BFG">
+                <img src="img/content-image/bosch-bfg-6000.jpg" width="144" height="128"
+                  alt="Перфоратор BOSCH 6000 BFG">
               </div>
               <h3>Перфоратор BOSCH 6000 BFG</h3>
               <del><span>30500 Р.</span></del>
@@ -159,14 +167,15 @@
           <article>
             <div>
               <div>
-                <a href="#"><img src="https://via.placeholder.com/15x15" alt="">Купить</a>
+                <a href="#">Купить</a>
                 <a href="#">В закладки</a>
               </div>
               <div>
-                <img src="https://via.placeholder.com/127x112" alt="Перфоратор BOSCH 2000 BFG">
+                <img src="img/content-image/bosch-bfg-2000.jpg" width="127" height="112"
+                  alt="Перфоратор BOSCH 2000 BFG">
               </div>
               <div>
-                <img src="https://via.placeholder.com/70x70" alt="">
+                <img src="https://via.placeholder.com/70x70" alt="Новинка">
               </div>
               <h3>Перфоратор BOSCH 2000 BFG</h3>
               <!--Попробовал вместо &lt;br&gt; использовать &amp;NewLine&semi;. В браузере ничего не переносится. Пока оставил без переносов. Возможно ли в этом случае воспользоваться тегом &lt;pre&gt;?-->
@@ -183,14 +192,16 @@
         <a href="catalog.html">Все производители</a>
       </div>
       <ul>
-        <li><a href="#"><img src="https://via.placeholder.com/220x145" alt="BOSCH"></a></li>
-        <li><a href="#"><img src="https://via.placeholder.com/220x145" alt="Makita"></a></li>
-        <li><a href="#"><img src="https://via.placeholder.com/220x145" alt="DeWalt"></a></li>
-        <li><a href="#"><img src="https://via.placeholder.com/220x145" alt="Интерскол"></a></li>
-        <li><a href="#"><img src="https://via.placeholder.com/220x145" alt="HITACHI"></a></li>
-        <li><a href="#"><img src="https://via.placeholder.com/220x145" alt="LG"></a></li>
-        <li><a href="#"><img src="https://via.placeholder.com/220x145" alt="AEG"></a></li>
-        <li><a href="#"><img src="https://via.placeholder.com/220x145" alt="Metabo"></a></li>
+        <li><a href="#"><img src="img/content-image/bosch.png" width="126" height="37" alt="Компания BOSCH"></a></li>
+        <li><a href="#"><img src="img/content-image/makita.png" width="123" height="40" alt="Компания Makita"></a></li>
+        <li><a href="#"><img src="img/content-image/deWalt.png" width="146" height="44" alt="Компания DeWalt"></a></li>
+        <li><a href="#"><img src="img/content-image/interskol.png" width="200" height="76" alt="Компания Интерскол"></a>
+        </li>
+        <li><a href="#"><img src="img/content-image/hitachi.png" width="169" height="31" alt="Компания HITACHI"></a>
+        </li>
+        <li><a href="#"><img src="img/content-image/lg.png" width="169" height="31" alt="Компания LG"></a></li>
+        <li><a href="#"><img src="img/content-image/aeg.png" width="151" height="96" alt="Компания AEG"></a></li>
+        <li><a href="#"><img src="img/content-image/metabo.png" width="204" height="69" alt="Компания Metabo"></a></li>
       </ul>
     </section>
     <section>
@@ -239,14 +250,14 @@
     <section>
       <h2>Контакты</h2>
       <p>Вы можете забрать товар сами,<br> заехав в наш офис:</p>
-      <a href="#"><img src="https://via.placeholder.com/300x158" alt=""></a>
+      <a href="#"><img src="img/content-image/map.png" width="300" height="158" alt=""></a>
       <a href="#">Заблудились? Напишите нам!</a>
     </section>
   </main>
   <footer>
     <div>
       <div>
-        <a href="#"><img src="https://via.placeholder.com/220x68" alt=""></a>
+        <a href="#"><img src="img/logo/logo-footer.svg" width="138" height="23" alt="Логотип компании"></a>
         <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         <a href="tel:+78125550555">+7(812)555-05-55</a>
       </div>
@@ -277,9 +288,10 @@
         <h2>Наши соцсети</h2>
         <!--Эти секционные заголовки позже будем прятать-->
         <ul>
-          <li><a href="#"><img src="https://via.placeholder.com/26x15" alt="Вконтакте"></a></li>
-          <li><a href="#"><img src="https://via.placeholder.com/12x22" alt="Фейсбук"></a></li>
-          <li><a href="#"><img src="https://via.placeholder.com/21x21" alt="Инстаграм"></a></li>
+          <!--Иконки здесь подключатся через CSS. А поясняющий текст внутри ссылок уберется с помощью класса visually-hidden.-->
+          <li><a href="#">Мы Вконтакте</a></li>
+          <li><a href="#">Мы в Фейсбук</a></li>
+          <li><a href="#">Мы в Инстаграм</a></li>
         </ul>
       </section>
       <section>
