@@ -3,18 +3,19 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="icon" href="favicon.ico">
-  <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="favicon/180.png">
-  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="./favicon.ico">
+  <link rel="icon" href="./favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./favicon/180.png">
+  <link rel="manifest" href="./manifest.webmanifest">
   <title>Интернет-магазин Техномарт</title>
 </head>
 
 <body>
   <header>
     <div>
-      <a href="#"><img src="img/logo/logo-header.svg" width="108" height="18" alt="Логотип компании"></a>
+      <a href="#"><img src="./img/logo/logo-header.svg" width="108" height="18" alt="Логотип компании"></a>
       <form action="https://echo.htmlacademy.ru/" method="GET">
+        <img src="./img/icons/icon-search.svg" width="17" height="17" alt="Нажмите для поиска">
         <button type="submit"></button>
         <input type="search" name="search" placeholder="Поиск:">
       </form>
@@ -74,7 +75,7 @@
       <div>
         <div>
           <div>
-            <img src="img/slider/img-slider1.jpg" width="620" height="266"
+            <img src="./img/slider/img-slider1.jpg" width="620" height="266"
               alt="Профессионал использует перфоратор марки BOSCH на производстве">
             <div>
               <h3>Перфораторы</h3>
@@ -83,7 +84,7 @@
             <a href="catalog.html">Открыть каталог</a>
           </div>
           <div>
-            <img src="img/slider/img-slider2.jpg" width="620" height="266"
+            <img src="./img/slider/img-slider2.jpg" width="620" height="266"
               alt="Профессионал использует дрель марки BOSCH на производстве">
             <div>
               <h3>Дрели</h3>
@@ -117,11 +118,10 @@
                 <a href="#">Купить</a>
                 <a href="#">В закладки</a>
               </div>
-              <div>
-                <img src="img/content-image/bosch-bng-9000.jpg" width="184" height="164"
-                  alt="Перфоратор BOSCH 9000 BFG">
-              </div>
-              <h3>Перфоратор BOSCH 9000 BFG</h3>
+              <a href="#">
+                <img src="./img/catalog/bosch-bng-9000.jpg" width="184" height="164" alt="Перфоратор BOSCH 9000 BFG">
+              </a>
+              <h3><a href="#">Перфоратор BOSCH 9000 BFG</a></h3>
               <del><span>32500 Р.</span></del>
               <a href="#">25500 Р.</a>
             </div>
@@ -134,13 +134,13 @@
                 <a href="#">Купить</a>
                 <a href="#">В закладки</a>
               </div>
-              <div>
-                <img src="img/content-image/bosch-bng-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH 3000BFG">
-              </div>
+              <a href="#">
+                <img src="./img/catalog/bosch-bng-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH 3000BFG">
+              </a>
               <div>
                 <img src="https://via.placeholder.com/70x70" alt="Новинка">
               </div>
-              <h3>Перфоратор BOSCH 3000 BFG</h3>
+              <h3><a href="#">Перфоратор BOSCH 3000 BFG</a></h3>
               <del><span>22500 Р.</span></del>
               <a href="#">15500 Р.</a>
             </div>
@@ -153,11 +153,10 @@
                 <a href="#">Купить</a>
                 <a href="#">В закладки</a>
               </div>
-              <div>
-                <img src="img/content-image/bosch-bfg-6000.jpg" width="144" height="128"
-                  alt="Перфоратор BOSCH 6000 BFG">
-              </div>
-              <h3>Перфоратор BOSCH 6000 BFG</h3>
+              <a href="#">
+                <img src="./img/catalog/bosch-bfg-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH 6000 BFG">
+              </a>
+              <h3><a href="#">Перфоратор BOSCH 6000 BFG</a></h3>
               <del><span>30500 Р.</span></del>
               <a href="#">25500 Р.</a>
             </div>
@@ -170,14 +169,13 @@
                 <a href="#">Купить</a>
                 <a href="#">В закладки</a>
               </div>
-              <div>
-                <img src="img/content-image/bosch-bfg-2000.jpg" width="127" height="112"
-                  alt="Перфоратор BOSCH 2000 BFG">
-              </div>
+              <a href="#">
+                <img src="./img/catalog/bosch-bfg-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH 2000 BFG">
+              </a>
               <div>
                 <img src="https://via.placeholder.com/70x70" alt="Новинка">
               </div>
-              <h3>Перфоратор BOSCH 2000 BFG</h3>
+              <h3><a>Перфоратор BOSCH 2000 BFG</a></h3>
               <!--Попробовал вместо &lt;br&gt; использовать &amp;NewLine&semi;. В браузере ничего не переносится. Пока оставил без переносов. Возможно ли в этом случае воспользоваться тегом &lt;pre&gt;?-->
               <del><span>22500 Р.</span></del>
               <a href="#">12500 Р.</a>
@@ -192,16 +190,16 @@
         <a href="catalog.html">Все производители</a>
       </div>
       <ul>
-        <li><a href="#"><img src="img/content-image/bosch.png" width="126" height="37" alt="Компания BOSCH"></a></li>
-        <li><a href="#"><img src="img/content-image/makita.png" width="123" height="40" alt="Компания Makita"></a></li>
-        <li><a href="#"><img src="img/content-image/deWalt.png" width="146" height="44" alt="Компания DeWalt"></a></li>
-        <li><a href="#"><img src="img/content-image/interskol.png" width="200" height="76" alt="Компания Интерскол"></a>
+        <li><a href="#"><img src="./img/catalog/bosch.png" width="126" height="37" alt="Компания BOSCH"></a></li>
+        <li><a href="#"><img src="./img/catalog/makita.png" width="123" height="40" alt="Компания Makita"></a></li>
+        <li><a href="#"><img src="./img/catalog/deWalt.png" width="146" height="44" alt="Компания DeWalt"></a></li>
+        <li><a href="#"><img src="/.img/catalog/interskol.png" width="200" height="76" alt="Компания Интерскол"></a>
         </li>
-        <li><a href="#"><img src="img/content-image/hitachi.png" width="169" height="31" alt="Компания HITACHI"></a>
+        <li><a href="#"><img src="./img/catalog/hitachi.png" width="169" height="31" alt="Компания HITACHI"></a>
         </li>
-        <li><a href="#"><img src="img/content-image/lg.png" width="169" height="31" alt="Компания LG"></a></li>
-        <li><a href="#"><img src="img/content-image/aeg.png" width="151" height="96" alt="Компания AEG"></a></li>
-        <li><a href="#"><img src="img/content-image/metabo.png" width="204" height="69" alt="Компания Metabo"></a></li>
+        <li><a href="#"><img src="./img/catalog/lg.png" width="169" height="31" alt="Компания LG"></a></li>
+        <li><a href="#"><img src="./img/catalog/aeg.png" width="151" height="96" alt="Компания AEG"></a></li>
+        <li><a href="#"><img src="./img/catalog/metabo.png" width="204" height="69" alt="Компания Metabo"></a></li>
       </ul>
     </section>
     <section>
@@ -249,15 +247,15 @@
     </section>
     <section>
       <h2>Контакты</h2>
-      <p>Вы можете забрать товар сами,<br> заехав в наш офис:</p>
-      <a href="#"><img src="img/content-image/map.png" width="300" height="158" alt=""></a>
+      <p>Вы можете забрать товар сами, заехав в наш офис:</p>
+      <a href="#"><img src="./img/catalog/map.png" width="300" height="158" alt=""></a>
       <a href="#">Заблудились? Напишите нам!</a>
     </section>
   </main>
   <footer>
     <div>
       <div>
-        <a href="#"><img src="img/logo/logo-footer.svg" width="138" height="23" alt="Логотип компании"></a>
+        <a href="#"><img src="./img/logo/logo-footer.svg" width="138" height="23" alt="Логотип компании"></a>
         <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         <a href="tel:+78125550555">+7(812)555-05-55</a>
       </div>
