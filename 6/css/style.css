@@ -238,8 +238,6 @@ img {
   display: grid;
   grid-template-columns: 260px 1fr 1fr;
   align-items: center;
-  outline: 2px solid red;
-  outline-offset: -2px;
 }
 
 .header-title {
@@ -248,8 +246,6 @@ img {
   line-height: var(--line-height-5);
   font-weight: var(--font-weight-normal);
   color: var(--color-text-accent);
-  outline: 2px solid blueviolet;
-  outline-offset: -2px;
 }
 
 .header-title-text {
@@ -264,8 +260,6 @@ img {
   padding-top: 41px;
   padding-bottom: 40px;
   justify-self: center;
-  outline: 2px solid green;
-  outline-offset: -2px;
 }
 
 .header-contacts-phone {
@@ -289,8 +283,6 @@ img {
 
 .header-authorization {
   justify-self: end;
-  outline: 2px solid yellow;
-  outline-offset: -2px;
 }
 
 .header-authorization-link-sign-in {
@@ -524,8 +516,8 @@ img {
 }
 
 .card__replace-img {
-  z-index: -1;
   position: absolute;
+  opacity: 0;
 }
 
 .card__title {
@@ -689,8 +681,6 @@ img {
 .services-tabs-pagination-index:hover, .services-tabs-pagination-index:focus {
   background-color: var(--color-tab-bg-hover-focus);
 }
-
-/*Как сделать чтобы таб оставался белым в активном состоянии?*/
 
 .services-tabs-pagination-index.active {
   color: var(--text-color-blue);
@@ -894,6 +884,7 @@ img {
 .perforators {
   display: grid;
   grid-template-columns: 1fr 3fr;
+  gap: 10px;
   grid-template-rows: auto auto max-content auto;
 }
 
@@ -968,6 +959,7 @@ img {
   font-weight: var(--font-weight-normal);
   font-family: var(--secondary-font);
   text-transform: uppercase;
+  background-color: var(--bg-filter-color);
 }
 
 .sorting-title {
@@ -1040,6 +1032,7 @@ img {
 
 .about-product-inner {
   background-color: var(--bg-accent-color);
+  padding-bottom: 68px;
 }
 
 .about-product {
