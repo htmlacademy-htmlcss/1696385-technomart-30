@@ -103,6 +103,7 @@
   --color-footer-link-dark: var(--yellow-10);
   --color-footer-bottom-bg: var(--extra-blue);
   --color-form-bg-bottom: var(--light-blue-40);
+  --color-card-border: var(--light-gray-40);
   /* typography */
   --primary-font: "Cuprum", "Arial", sans-serif;
   --secondary-font: "PT Sans", "Arial", sans-serif;
@@ -126,6 +127,17 @@
   --lh-xl: 24px;
   --lh-xxl: 30px;
   --lh-xxxl: 36px;
+  --main-width: 960px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 .html {
@@ -136,7 +148,7 @@ body {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
-  min-width: 960px;
+  min-width: var(--main-width);
   min-height: 100%;
   margin: 0;
   padding: 0;
@@ -167,15 +179,9 @@ img {
 }
 
 .container {
-  width: 940px;
+  width: var(--main-width);
   margin: 0 auto;
   padding: 0 10px;
-}
-
-.container-nav {
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 0;
 }
 
 .header {
@@ -186,6 +192,7 @@ img {
   font-weight: var(--font-weight-normal);
   font-family: var(--primary-font);
   background-color: var(--color-header-bg-primary);
+  padding-bottom: 60px;
 }
 
 .header-top-inner {
@@ -194,7 +201,7 @@ img {
 
 .header-top {
   display: grid;
-  grid-template-columns: 3fr 3fr 2fr 2fr 2fr;
+  grid-template-columns: 220px 271px 1fr 1fr 1fr;
   color: var(--text-color-white);
 }
 
@@ -231,6 +238,8 @@ img {
   display: grid;
   grid-template-columns: 260px 1fr 1fr;
   align-items: center;
+  outline: 2px solid red;
+  outline-offset: -2px;
 }
 
 .header-title {
@@ -239,10 +248,28 @@ img {
   line-height: var(--line-height-5);
   font-weight: var(--font-weight-normal);
   color: var(--color-text-accent);
+  outline: 2px solid blueviolet;
+  outline-offset: -2px;
+}
+
+.header-title-text {
+  white-space: pre-line;
+  padding-top: 38px;
+  padding-bottom: 44px;
+  padding-left: 30px;
+  margin: 0;
 }
 
 .header-contacts {
+  padding-top: 41px;
+  padding-bottom: 40px;
   justify-self: center;
+  outline: 2px solid green;
+  outline-offset: -2px;
+}
+
+.header-contacts-phone {
+  border: 3px solid var(--basic-white);
 }
 
 .header-contacts-phone-link {
@@ -250,16 +277,28 @@ img {
   line-height: var(--lh-xxl);
   font-weight: var(--font-weight-bold);
   color: var(--color-text-accent);
+  padding: 7px 45px 8px 74px;
 }
 
 .header-contacts-addres {
   font-size: var(--font-size-xxs);
   line-height: var(--lh-xl);
   color: var(--text-color-blue);
+  padding: 0 10px;
 }
 
 .header-authorization {
-  justify-self: center;
+  justify-self: end;
+  outline: 2px solid yellow;
+  outline-offset: -2px;
+}
+
+.header-authorization-link-sign-in {
+  padding: 12px 27px 12px 45px;
+}
+
+.header-authorization-link-sign-up {
+  padding: 12px 24px;
 }
 
 .header-authorization-link-sign {
@@ -299,14 +338,28 @@ img {
 
 .header-navigation {
   background-color: var(--color-main-nav-bg);
-  margin-bottom: 60px;
 }
 
 .header-navigation-list {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(7, min-content);
   list-style: none;
   padding-left: 0;
+  margin: 0;
+}
+
+.header-navigation-list-item {
+  padding: 16px 28px 20px 28px;
+  text-align: center;
+  background-color: var(--color-main-nav-bg);
+}
+
+.header-navigation-list-item-first {
+  padding-left: 56px;
+}
+
+.header-navigation-list-item-last {
+  padding-right: 57px;
 }
 
 .header-navigation-list-item:hover, .header-navigation-list-item:focus {
@@ -346,6 +399,9 @@ img {
 
 .promo {
   display: grid;
+  grid-template-areas: "material tools equipment"
+                        "slider slider discount"
+                        "slider slider delivery";
   grid-template-columns: repeat(3, 300px);
   grid-template-rows: repeat(3, 123px);
   gap: 20px;
@@ -404,8 +460,7 @@ img {
 }
 
 .promo-slider {
-  grid-column: 1 / 3;
-  grid-row: 2 / 4;
+  grid-area: slider;
 }
 
 .promo-slider__title {
@@ -460,11 +515,17 @@ img {
 }
 
 .card {
+  display: grid;
+  justify-items: center;
+  align-items: center;
   font-family: var(--secondary-font);
+  border: 1px solid var(--color-card-border);
+  height: 318px;
 }
 
 .card__replace-img {
-  display: none;
+  z-index: -1;
+  position: absolute;
 }
 
 .card__title {
@@ -565,6 +626,7 @@ img {
   display: grid;
   grid-template-columns: 240px 1fr;
   grid-template-rows: 1fr 183px;
+  padding-bottom: 99px;
 }
 
 .services-top {
