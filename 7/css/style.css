@@ -524,14 +524,6 @@ img {
   text-align: center;
 }
 
-/* .header-navigation-list :first-child .header-navigation-list-item-link {
-  padding-left: 53px;
-}
-
-.header-navigation-list :last-child .header-navigation-list-item-link {
-  padding-right: 53px;
-} */
-
 .header-navigation-list-item:first-child .header-navigation-list-item-link {
   padding-left: 53px;
 }
