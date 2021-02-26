@@ -129,11 +129,11 @@
               <a class="promo-slider__btn button" href="#">Открыть каталог</a>
             </div>
           </div>
-          <button type="button" class="promo-slider-arrow-left"></button>
-          <button type="button" class="promo-slider-arrow-right"></button>
+          <button type="button" class="promo-slider-arrow-left slider-btn"></button>
+          <button type="button" class="promo-slider-arrow-right slider-btn"></button>
           <div class="promo-slider-pagination">
-            <button type="button" class="promo-slider-pagination-radio radio-back"></button>
-            <button type="button" class="promo-slider-pagination-radio radio-next active-slider"></button>
+            <button type="button" class="promo-slider-pagination-radio radio-back slider-btn"></button>
+            <button type="button" class="promo-slider-pagination-radio radio-next slider-btn active-slider"></button>
           </div>
         </div>
       </div>
@@ -365,14 +365,22 @@
     <h2 class="visually-hidden">Ваши данные</h2>
     <button class="modal-btn" type="button"></button>
     <form class="modal-form" action="https://echo.htmlacademy.ru/" method="POST">
-      <label class="modal-form-label" for="field-name">Ваше имя:</label>
-      <input type="text" name="your-name" id="field-name" placeholder="Имя Фамилия" required>
-      <label class="modal-form-label" for="field-email">Ваш e-mail:</label>
-      <input type="email" name="email" id="field-email" placeholder="email@example.com" required>
-      <label class="modal-form-label" for="message">Текст письма:</label>
-      <textarea name="text" id="message" cols="30" rows="5"></textarea>
+      <ul class="modal-form-list">
+        <li class="modal-form-list-item">
+          <label class="modal-form-label" for="field-name">Ваше имя:</label>
+          <input class="modal-form-input form-item" type="text" name="your-name" id="field-name" placeholder="  Имя Фамилия" required>
+        </li>
+        <li class="modal-form-list-item">
+          <label class="modal-form-label" for="field-email">Ваш e-mail:</label>
+          <input class="modal-form-input form-item" type="email" name="email" id="field-email" placeholder="  email@example.com" required>
+        </li>
+        <li class="modal-form-list-item">
+          <label class="modal-form-label" for="message">Текст письма:</label>
+          <textarea class="modal-form-letter form-item" name="text" id="message" cols="30" rows="5" placeholder="  В свободной форме"></textarea>
+        </li>
+      </ul>
       <div class="modal-form-bottom">
-        <button type="submit" class="modal-form-bottom button">Отправить</button>
+        <button class="modal-form-bottom-btn button" type="submit" class="modal-form-bottom button">Отправить</button>
       </div>
     </form>
   </section>
