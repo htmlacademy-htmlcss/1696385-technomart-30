@@ -446,7 +446,8 @@ img {
 
 .header-authorization {
   justify-self: end;
-  margin-bottom: 22px;
+  margin-top: 56px;
+  /* margin-bottom: 22px; */
 }
 
 .header-authorization-link-sign-in {
@@ -2075,6 +2076,7 @@ img {
   font-family: var(--secondary-font);
   text-transform: uppercase;
   background-color: var(--bg-filter-color);
+  border-radius: 3px;
 }
 
 .sorting-title {
@@ -2237,23 +2239,71 @@ img {
 
 .modal-basket {
   display: none;
+  position: fixed;
+  width: 620px;
+  height: 282px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-47%, -50%);
   font-style: normal;
   font-family: var(--primary-font);
+  background-color: var(--color-form-bg-bottom);
+  box-shadow: 0px 4px 20px var(--color-card-shadow);
 }
 
 .modal-basket-top {
+  position: relative;
+  padding-top: 38px;
+  padding-bottom: 67px;
+  padding-left: 2px;
   background-color: var(--main-bg-color);
   border-top: 7px solid var(--color-modal-border);
+}
+
+.modal-basket-top::before {
+  content: "";
+  position: absolute;
+  width: 66px;
+  height: 66px;
+  top: 47px;
+  left: 82px;
+  background-image: url(../img/icons/icon-mark.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+}
+
+.modal-basket-top .modal-btn::after {
+  top: 10px;
 }
 
 .modal-basket-top-title {
   font-size: var(--font-size-xxl);
   line-height: var(--lh-xxl);
   color: var(--text-color-black);
-  text-transform: uppercase;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-basket-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 37px;
+}
+
+.modal-basket-bottom-btn-by {
+  padding: 11px 46px 9px 47px;
+  margin-right: 10px;
 }
 
 .modal-basket-bottom-btn-close {
+  padding: 11px 31px 9px 32px;
   color: var(--text-color-black);
   background-color: var(--main-bg-color);
+}
+
+.modal-basket-bottom-btn-close:hover {
+  color: var(--text-color-white);
 }
