@@ -7,7 +7,7 @@
     href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:wght@400;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.min.css">
   <link rel="icon" href="./favicon.ico">
   <link rel="icon" href="./favicon/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./favicon/180.png">
@@ -106,7 +106,7 @@
       <div class="promo-slider">
         <div class="promo-slider-img">
           <div class="promo-slider-img-punch promo-slider-img-wrapper">
-            <img src="./img/slider/img-slider1.jpg" width="620" height="266"
+            <img class="promo-slider-img-bg" src="./img/slider/img-slider1.jpg" width="620" height="266"
               alt="Профессионал использует перфоратор марки BOSCH на производстве">
             <div class="promo-slider__punch">
               <div class="promo-slider__description">
@@ -117,7 +117,7 @@
             </div>
           </div>
           <div class="promo-slider-img-drill promo-slider-img-wrapper">
-            <img src="./img/slider/img-slider2.jpg" width="620" height="266"
+            <img class="promo-slider-img-bg" src="./img/slider/img-slider2.jpg" width="620" height="266"
               alt="Профессионал использует дрель марки BOSCH на производстве">
             <div class="promo-slider__drill">
               <div class="description">
@@ -211,26 +211,26 @@
     <section class="manufacturers container">
       <div class="manufacturers-header">
         <h2 class="manufacturers-header-title">Популярные производители:</h2>
-        <a class="manufacturers-header-btn button" href="catalog.html">Все производители</a>
+        <a class="manufacturers-header-btn button" href="#">Все производители</a>
       </div>
       <ul class="manufacturers-list">
-        <li class="manufacturers-list-item"><a class="partners-link" href="#"><img src="./img/catalog/bosch.png"
+        <li class="manufacturers-list-item"><a class="partners-link" href="#"><img class="manufacturers__img" src="./img/catalog/bosch.png"
               width="126" height="37" alt="Компания BOSCH"></a></li>
-        <li class="manufacturers-list-item"><a class="partners-link" href="#"><img src="./img/catalog/makita.png"
+        <li class="manufacturers-list-item"><a class="partners-link" href="#"><img class="manufacturers__img" src="./img/catalog/makita.png"
               width="123" height="40" alt="Компания Makita"></a></li>
-        <li class="manufacturers-list-item"><a class="partners-link" href="#"><img src="./img/catalog/deWalt.png"
+        <li class="manufacturers-list-item"><a class="partners-link" href="#"><img class="manufacturers__img" src="./img/catalog/deWalt.png"
               width="146" height="44" alt="Компания DeWalt"></a></li>
-        <li class="manufacturers-list-item"><a class="partners-link" href="#"><img src="./img/catalog/interskol.png"
+        <li class="manufacturers-list-item"><a class="partners-link" href="#"><img class="manufacturers__img" src="./img/catalog/interskol.png"
               width="200" height="76" alt="Компания Интерскол"></a>
         </li>
-        <li class="manufacturers-list-item"><a class="partners-link" href="#"><img src="./img/catalog/hitachi.png"
-              width="169" height="31" alt="Компания HITACHI"></a>
+        <li class="manufacturers-list-item"><a class="partners-link" href="#"><img class="img-hitachi manufacturers__img" src="./img/catalog/hitachi.png"
+              width="172" height="31" alt="Компания HITACHI"></a>
         </li>
-        <li class="manufacturers-list-item"><a class="partners-link" href="#"><img src="./img/catalog/lg.png"
+        <li class="manufacturers-list-item"><a class="partners-link" href="#"><img class="manufacturers__img" src="./img/catalog/lg.png"
               width="121" height="73" alt="Компания LG"></a></li>
-        <li class="manufacturers-list-item"><a class="partners-link" href="#"><img src="./img/catalog/aeg.png"
+        <li class="manufacturers-list-item"><a class="partners-link" href="#"><img class="manufacturers__img" src="./img/catalog/aeg.png"
               width="151" height="96" alt="Компания AEG"></a></li>
-        <li class="manufacturers-list-item"><a class="partners-link" href="#"><img src="./img/catalog/metabo.png"
+        <li class="manufacturers-list-item"><a class="partners-link" href="#"><img class="manufacturers__img" src="./img/catalog/metabo.png"
               width="204" height="69" alt="Компания Metabo"></a></li>
       </ul>
     </section>
@@ -384,6 +384,11 @@
       </form>
     </div>
     <div class="modal-bottom-bg"></div>
+  </section>
+  <section class="modal-map">
+    <h2 class="visually-hidden">Как до нас добраться</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.598942412363!2d30.32089461559019!3d59.938796869048495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1614621171707!5m2!1sru!2sru" width="943" height="449" style="border:0;" allowfullscreen="" loading="lazy" title="Офис компании по адресу Большая Конюшенная ул., 19, Санкт-Петербург, 191186"></iframe>
+    <button class="modal-btn"></button>
   </section>
 </body>
 
