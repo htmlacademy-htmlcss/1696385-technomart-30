@@ -21,21 +21,19 @@
       <div class="header-top container">
         <a class="header-top-logo" href="#"><img src="./img/logo/logo-header.svg" width="108" height="18"
             alt="Логотип компании"></a>
-        <form class="header-top-form" action="https://echo.htmlacademy.ru/" method="GET">
-          <label class="header-top-form-label">
-            <input class="header-top-form-input" type="search" name="search" placeholder="Поиск:">
-            <button class="header-top-form-btn" type="submit">
-              <svg class="search-svg" width="17" height="17" viewBox="0 0 17 17" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"
-                  fill="currentColor" />
-              </svg>
-            </button>
-          </label>
-        </form>
+            <form class="header-top-form" action="https://echo.htmlacademy.ru/" method="GET">
+              <input class="header-top-form-input" type="search" name="search" placeholder="Поиск:">
+              <button class="header-top-form-btn" type="submit">
+                <svg class="search-svg" width="17" height="17" viewBox="0 0 17 17" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"
+                    fill="currentColor" />
+                </svg>
+              </button>
+            </form>
         <a class="header-top-link header-top-link-bookmarks" href="#">Закладки: <span>0</span></a>
-        <a class="header-top-link header-top-link-basket" href="#">Корзина: <span>0</span></a>
+        <a class="header-top-link header-top-link-basket basket-active" href="#">Корзина: <span>10</span></a>
         <a class="header-top-link header-top-link-to-buy" href="#">Оформить заказ</a>
       </div>
     </div>
@@ -90,7 +88,7 @@
     <div class="breadcrumbs container">
       <ul class="breadcrumbs-list">
         <li class="breadcrumbs-list-item"><a class="breadcrumbs-icon breadcrumbs-list-item-link" href="index.html"></a></li>
-        <li class="breadcrumbs-list-item"><a class="breadcrumbs-text breadcrumbs-list-item-link" href="./catalog.html">Каталог</a></li>
+        <li class="breadcrumbs-list-item"><a class="breadcrumbs-text breadcrumbs-list-item-link" href="#">Каталог</a></li>
         <li class="breadcrumbs-list-item"><a class="breadcrumbs-text breadcrumbs-list-item-link" href="#">Инструмент</a></li>
         <li class="breadcrumbs-list-item"><a class="breadcrumbs-text breadcrumbs-list-item-link">Перфораторы</a></li>
       </ul>
@@ -110,13 +108,13 @@
               <div class="scale">
                 <div class="bar"></div>
               </div>
-              <div class="toggle min-toggle" tabindex="0"></div>
-              <div class="toggle max-toggle" tabindex="0"></div>
+              <button class="toggle min-toggle" type="button" tabindex="0"></button>
+              <button class="toggle max-toggle" type="button" tabindex="0"></button>
             </div>
             <div class="price-value">
               <input class="perforators__filter-form-fieldset-value perforators__filter-form-fieldset-value-from"
                 type="text" name="price-from" value="0">
-              <!-- <span class="perforators__filter-form-fieldset-dash">—</span> -->
+              <span class="perforators__filter-form-fieldset-dash">—</span>
               <input class="perforators__filter-form-fieldset-value perforators__filter-form-fieldset-value-to"
                 type="text" name="price-to" value="30000">
             </div>
@@ -133,16 +131,16 @@
                 <label class="perforators__filter-form-fieldset-label manufacturers-label" for="interskol">Интерскол</label>
               </li>
               <li class="perforators__manufacturers-list-item">
-              <input class="perforators__filter-form-fieldset-checkbox visually-hidden" type="checkbox" name="makita" id="makita" checked>
-              <label class="perforators__filter-form-fieldset-label manufacturers-label" for="makita">Makita</label>
+                <input class="perforators__filter-form-fieldset-checkbox visually-hidden" type="checkbox" name="makita" id="makita" checked>
+                <label class="perforators__filter-form-fieldset-label manufacturers-label" for="makita">Makita</label>
               </li>
               <li class="perforators__manufacturers-list-item">
-              <input class="perforators__filter-form-fieldset-checkbox visually-hidden" type="checkbox" name="dewalt" id="dewalt">
-              <label class="perforators__filter-form-fieldset-label manufacturers-label" for="dewalt">DeWalt</label>
+                <input class="perforators__filter-form-fieldset-checkbox visually-hidden" type="checkbox" name="dewalt" id="dewalt">
+                <label class="perforators__filter-form-fieldset-label manufacturers-label" for="dewalt">DeWalt</label>
               </li>
               <li class="perforators__manufacturers-list-item">
-              <input class="perforators__filter-form-fieldset-checkbox visually-hidden" type="checkbox" name="hitachi" id="hitachi">
-              <label class="perforators__filter-form-fieldset-label manufacturers-label" for="hitachi">Hitachi</label>
+                <input class="perforators__filter-form-fieldset-checkbox visually-hidden" type="checkbox" name="hitachi" id="hitachi">
+                <label class="perforators__filter-form-fieldset-label manufacturers-label" for="hitachi">Hitachi</label>
               </li>
             </ul>
           </fieldset>
@@ -186,7 +184,7 @@
           <article class="card">
             <h3 class="card__heading"><a class="card__title" href="#"><span class="card__title-string">Перфоратор
                   BOSCH</span><span class="card__title-string">BFG 6000</span></a></h3>
-            <div class="card__replace-img">
+            <div class="card__buttons">
               <a class="button card__button-buy" href="#">Купить</a>
               <a class="button card__to-bookmark" href="#">В закладки</a>
             </div>
@@ -202,7 +200,7 @@
           <article class="card">
             <h3 class="card__heading"><a class="card__title" href="#"><span class="card__title-string">Перфоратор
                   BOSCH</span><span class="card__title-string">BFG 6000</span></a></h3>
-            <div class="card__replace-img">
+            <div class="card__buttons">
               <a class="button card__button-buy" href="#">Купить</a>
               <a class="button card__to-bookmark" href="#">В закладки</a>
             </div>
@@ -218,7 +216,7 @@
           <article class="card new">
             <h3 class="card__heading"><a class="card__title" href="#"><span class="card__title-string">Перфоратор
                   BOSCH</span><span class="card__title-string">BFG 6000</span></a></h3>
-            <div class="card__replace-img">
+            <div class="card__buttons">
               <a class="button card__button-buy" href="#">Купить</a>
               <a class="button card__to-bookmark" href="#">В закладки</a>
             </div>
@@ -234,7 +232,7 @@
           <article class="card new">
             <h3 class="card__heading"><a class="card__title" href="#"><span class="card__title-string">Перфоратор
                   BOSCH</span><span class="card__title-string">BFG 3000</span></a></h3>
-            <div class="card__replace-img">
+            <div class="card__buttons">
               <a class="button card__button-buy" href="#">Купить</a>
               <a class="button card__to-bookmark" href="#">В закладки</a>
             </div>
@@ -250,7 +248,7 @@
           <article class="card">
             <h3 class="card__heading"><a class="card__title" href="#"><span class="card__title-string">Перфоратор
                   BOSCH</span><span class="card__title-string">BFG 6000</span></a></h3>
-            <div class="card__replace-img">
+            <div class="card__buttons">
               <a class="button card__button-buy" href="#">Купить</a>
               <a class="button card__to-bookmark" href="#">В закладки</a>
             </div>
@@ -266,7 +264,7 @@
           <article class="card new">
             <h3 class="card__heading"><a class="card__title" href="#"><span class="card__title-string">Перфоратор
                   BOSCH</span><span class="card__title-string">BFG 2000</span></a></h3>
-            <div class="card__replace-img">
+            <div class="card__buttons">
               <a class="button card__button-buy" href="#">Купить</a>
               <a class="button card__to-bookmark" href="#">В закладки</a>
             </div>
@@ -282,7 +280,7 @@
           <article class="card new">
             <h3 class="card__heading"><a class="card__title" href="#"><span class="card__title-string">Перфоратор
                   BOSCH</span><span class="card__title-string">BFG 3000</span></a></h3>
-            <div class="card__replace-img">
+            <div class="card__buttons">
               <a class="button card__button-buy" href="#">Купить</a>
               <a class="button card__to-bookmark" href="#">В закладки</a>
             </div>
@@ -298,7 +296,7 @@
           <article class="card">
             <h3 class="card__heading"><a class="card__title" href="#"><span class="card__title-string">Перфоратор
                   BOSCH</span><span class="card__title-string">BFG 6000</span></a></h3>
-            <div class="card__replace-img">
+            <div class="card__buttons">
               <a class="button card__button-buy" href="#">Купить</a>
               <a class="button card__to-bookmark" href="#">В закладки</a>
             </div>
@@ -314,7 +312,7 @@
           <article class="card new">
             <h3 class="card__heading"><a class="card__title" href="#"><span class="card__title-string">Перфоратор
                   BOSCH</span><span class="card__title-string">BFG 2000</span></a></h3>
-            <div class="card__replace-img">
+            <div class="card__buttons">
               <a class="button card__button-buy" href="#">Купить</a>
               <a class="button card__to-bookmark" href="#">В закладки</a>
             </div>
@@ -408,13 +406,13 @@
         </section>
         <section class="footer-bottom-feedback">
           <h2 class="visually-hidden">Наша почта и копирайт</h2>
-          <p class="footer-bottom-feedback-email" href="mailto:mail@htmlacademy.ru">
+          <p class="footer-bottom-feedback-email">
             <span class="footer-bottom-feedback-email-text">Обратная связь:</span>
-            <a class="footer-bottom-feedback-yellow-link">mail@htmlacademy.ru</a>
+            <a class="footer-bottom-feedback-yellow-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </p>
-          <p class="footer-bottom-feedback-cite" href="https://htmlacademy.ru/intensive/htmlcss">
+          <p class="footer-bottom-feedback-cite">
             <span class="footer-bottom-feedback-cite-text">Разработано —</span>
-            <a class="footer-bottom-feedback-yellow-link">htmlacademy.ru</a>
+            <a class="footer-bottom-feedback-yellow-link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
           </p>
         </section>
       </div>
