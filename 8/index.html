@@ -23,17 +23,15 @@
         <a class="header-top-logo" href="#"><img src="./img/logo/logo-header.svg" width="108" height="18"
             alt="Логотип компании"></a>
         <form class="header-top-form" action="https://echo.htmlacademy.ru/" method="GET">
-          <label class="header-top-form-label">
-            <input class="header-top-form-input" type="search" name="search" placeholder="Поиск:">
-            <button class="header-top-form-btn" type="submit">
-              <svg class="search-svg" width="17" height="17" viewBox="0 0 17 17" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"
-                  fill="currentColor" />
-              </svg>
-            </button>
-          </label>
+          <input class="header-top-form-input" type="search" name="search" placeholder="Поиск:">
+          <button class="header-top-form-btn" type="submit">
+            <svg class="search-svg" width="17" height="17" viewBox="0 0 17 17" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"
+                fill="currentColor" />
+            </svg>
+          </button>
         </form>
         <a class="header-top-link header-top-link-bookmarks" href="#">Закладки: <span>0</span></a>
         <a class="header-top-link header-top-link-basket" href="#">Корзина: <span>0</span></a>
@@ -116,7 +114,7 @@
                 <h3 class="promo-slider__title">Перфораторы</h3>
                 <p class="promo-slider__text">Настоящие мужские игрушки</p>
               </div>
-              <a class="promo-slider__btn button" href="catalog.html" class="btn">Открыть каталог</a>
+              <a class="promo-slider__btn button" href="catalog.html">Открыть каталог</a>
             </div>
           </div>
           <div class="promo-slider-img-drill promo-slider-img-wrapper">
@@ -148,8 +146,8 @@
         <li class="cards-item">
           <article class="card">
             <h3 class="card__heading"><a class="card__title" href="#"><span class="card__title-string">Перфоратор
-                  BOSCH</span><span class="card__title-string">BFG 9000</a></h3>
-            <div class="card__replace-img">
+                  BOSCH</span><span class="card__title-string">BFG 9000</span></a></h3>
+            <div class="card__buttons">
               <a class="button card__button-buy" href="#">Купить</a>
               <a class="button card__to-bookmark" href="#">В закладки</a>
             </div>
@@ -165,7 +163,7 @@
           <article class="card new">
             <h3 class="card__heading"><a class="card__title" href="#"><span class="card__title-string">Перфоратор
                   BOSCH</span><span class="card__title-string">BFG 3000</span></a></h3>
-            <div class="card__replace-img">
+            <div class="card__buttons">
               <a class="button card__button-buy" href="#">Купить</a>
               <a class="button card__to-bookmark" href="#">В закладки</a>
             </div>
@@ -181,7 +179,7 @@
           <article class="card">
             <h3 class="card__heading"><a class="card__title" href="#"><span class="card__title-string">Перфоратор
                   BOSCH</span><span class="card__title-string">BFG 6000</span></a></h3>
-            <div class="card__replace-img">
+            <div class="card__buttons">
               <a class="button card__button-buy" href="#">Купить</a>
               <a class="button card__to-bookmark" href="#">В закладки</a>
             </div>
@@ -197,7 +195,7 @@
           <article class="card new">
             <h3 class="card__heading"><a class="card__title" href="#"><span class="card__title-string">Перфоратор
                   BOSCH</span><span class="card__title-string">BFG 2000</span></a></h3>
-            <div class="card__replace-img">
+            <div class="card__buttons">
               <a class="button card__button-buy" href="#">Купить</a>
               <a class="button card__to-bookmark" href="#">В закладки</a>
             </div>
@@ -350,40 +348,43 @@
         </section>
         <section class="footer-bottom-feedback">
           <h2 class="visually-hidden">Наша почта и копирайт</h2>
-          <p class="footer-bottom-feedback-email" href="mailto:mail@htmlacademy.ru">
+          <p class="footer-bottom-feedback-email">
             <span class="footer-bottom-feedback-email-text">Обратная связь:</span>
-            <a class="footer-bottom-feedback-yellow-link">mail@htmlacademy.ru</a>
+            <a class="footer-bottom-feedback-yellow-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </p>
-          <p class="footer-bottom-feedback-cite" href="https://htmlacademy.ru/intensive/htmlcss">
+          <p class="footer-bottom-feedback-cite">
             <span class="footer-bottom-feedback-cite-text">Разработано —</span>
-            <a class="footer-bottom-feedback-yellow-link">htmlacademy.ru</a>
+            <a class="footer-bottom-feedback-yellow-link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
           </p>
         </section>
       </div>
     </div>
   </footer>
   <section class="modal">
-    <h2 class="visually-hidden">Ваши данные</h2>
-    <button class="modal-btn" type="button"></button>
-    <form class="modal-form" action="https://echo.htmlacademy.ru/" method="POST">
-      <ul class="modal-form-list">
-        <li class="modal-form-list-item">
-          <label class="modal-form-label" for="field-name">Ваше имя:</label>
-          <input class="modal-form-input form-item" type="text" name="your-name" id="field-name" placeholder="  Имя Фамилия" required>
-        </li>
-        <li class="modal-form-list-item">
-          <label class="modal-form-label" for="field-email">Ваш e-mail:</label>
-          <input class="modal-form-input form-item" type="email" name="email" id="field-email" placeholder="  email@example.com" required>
-        </li>
-        <li class="modal-form-list-item">
-          <label class="modal-form-label" for="message">Текст письма:</label>
-          <textarea class="modal-form-letter form-item" name="text" id="message" cols="30" rows="5" placeholder="  В свободной форме"></textarea>
-        </li>
-      </ul>
-      <div class="modal-form-bottom">
-        <button class="modal-form-bottom-btn button" type="submit" class="modal-form-bottom button">Отправить</button>
-      </div>
-    </form>
+    <div class="modal-wrapper">
+      <h2 class="visually-hidden">Ваши данные</h2>
+      <button class="modal-btn" type="button"></button>
+      <form class="modal-form" action="https://echo.htmlacademy.ru/" method="GET">
+        <ul class="modal-form-list">
+          <li class="modal-form-list-item">
+            <label class="modal-form-label" for="field-name">Ваше имя:</label>
+            <input class="modal-form-input form-item" type="text" name="your-name" id="field-name" placeholder="  Имя Фамилия" required>
+          </li>
+          <li class="modal-form-list-item">
+            <label class="modal-form-label" for="field-email">Ваш e-mail:</label>
+            <input class="modal-form-input form-item" type="email" name="email" id="field-email" placeholder="  email@example.com" required>
+          </li>
+          <li class="modal-form-list-item">
+            <label class="modal-form-label" for="message">Текст письма:</label>
+            <textarea class="modal-form-letter form-item" name="text" id="message" cols="30" rows="5" placeholder="В свободной форме"></textarea>
+          </li>
+        </ul>
+        <div class="modal-form-bottom">
+          <button class="modal-form-bottom-btn button" type="submit">Отправить</button>
+        </div>
+      </form>
+    </div>
+    <div class="modal-bottom-bg"></div>
   </section>
 </body>
 
