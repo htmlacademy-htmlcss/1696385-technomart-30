@@ -650,7 +650,7 @@ img {
   padding: 11px 0 9px 0;
 }
 
-.button:hover, .button:focus {
+.button:hover {
   background-color: var(--color-btn-bg-hover-focus);
 }
 
@@ -809,10 +809,6 @@ img {
   background-color: var(--color-box-btn-bg-hover-focus);
 }
 
-.promo-element-btn:focus {
-  background-color: var(--color-box-btn-bg-hover-focus);
-}
-
 .promo-element-btn:active {
   background-color: var(--color-box-btn-bg-active);
 }
@@ -853,6 +849,7 @@ img {
 }
 
 .promo-slider-img-punch {
+  display: none;
   position: relative;
 }
 
@@ -875,6 +872,10 @@ img {
 .promo-slider-img-drill {
   display: none;
   position: relative;
+}
+
+.slider-active {
+  display: block;
 }
 
 .promo-slider__drill {
@@ -952,7 +953,7 @@ img {
   right: 294px;
 }
 
-.active-slider {
+.active-radio {
   width: 10px;
   height: 10px;
   border: 2px solid var(--main-bg-color);
@@ -1099,7 +1100,7 @@ img {
   opacity: 0.3;
 }
 
-.card__button-buy:hover, .card__button-buy:focus {
+.card__button-buy:hover {
   background-color: var(--color-btn-buy-bg-hover-focus);
 }
 
@@ -1117,7 +1118,7 @@ img {
   border-radius: 2px;
 }
 
-.card__to-bookmark:hover, .card__to-bookmark:focus {
+.card__to-bookmark:hover {
   background-color: var(--main-bg-color);
   border: 3px solid var(--color-tobookmark-border-hover-focus);
 }
@@ -1318,6 +1319,7 @@ img {
 
 .services-tabs-item {
   position: relative;
+  display: none;
 }
 
 .services-tabs-item-delivery::after {
@@ -1361,9 +1363,8 @@ img {
   border-radius: 3px;
 }
 
-.services-tabs-item-credit,
-.services-tabs-item-quarantee {
-  display: none;
+.services-tabs-item-active {
+  display: block;
 }
 
 .services-tabs-pagination-index {
@@ -1376,12 +1377,16 @@ img {
   padding: 15px 0 18px 22px;
 }
 
-.services-tabs-pagination-index:hover, .services-tabs-pagination-index:focus {
+.services-tabs-pagination-index:hover {
   background-color: var(--color-tab-bg-hover-focus);
 }
 
-.services-tabs-pagination-index.active {
+.active-tab {
   color: var(--text-color-blue);
+  background-color: var(--main-bg-color);
+}
+
+.active-tab:hover {
   background-color: var(--main-bg-color);
 }
 
@@ -1693,6 +1698,17 @@ img {
   box-shadow: 0px 4px 20px var(--color-card-shadow);
 }
 
+.modal-show {
+  display: flex;
+  animation-name: jump;
+  animation-duration: 0.4s;
+}
+
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.4s;
+}
+
 .modal-wrapper {
   width: 74.2%;
   display: flex;
@@ -1830,6 +1846,23 @@ img {
   transform: translate(-50%, -50%);
   border-top: 7px solid var(--color-popup-border);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal-map-show {
+  display: block;
+  animation-name: jump;
+  animation-duration: 0.4s;
+}
+
+.modal-map .modal-btn::after {
+  top: 0;
+  left: 0;
+}
+
+.map-close {
+  position: absolute;
+  top: 17px;
+  right: 10px;
 }
 
 /* CATALOG */
@@ -2364,13 +2397,30 @@ img {
   box-shadow: 0px 4px 20px var(--color-card-shadow);
 }
 
+.modal-basket-show {
+  display: block;
+  animation-name: jump;
+  animation-duration: 0.4s;
+}
+
 .modal-basket-top {
   position: relative;
-  padding-top: 38px;
+  padding-top: 66px;
   padding-bottom: 67px;
-  padding-left: 2px;
+  padding-left: 1px;
   background-color: var(--main-bg-color);
   border-top: 7px solid var(--color-modal-border);
+}
+
+.modal-basket-top-btn-close {
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+
+.modal-basket .modal-btn::after {
+  top: 0;
+  right: 0;
 }
 
 .modal-basket-top::before {
@@ -2383,11 +2433,6 @@ img {
   background-image: url(../img/icons/icon-mark.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
-
-}
-
-.modal-basket-top .modal-btn::after {
-  top: 10px;
 }
 
 .modal-basket-top-title {
@@ -2419,4 +2464,33 @@ img {
 
 .modal-basket-bottom-btn-close:hover {
   color: var(--text-color-white);
+}
+
+@keyframes jump {
+  0% { transform: translate(-50%, -2000px); }
+  40% { transform: translate(-50%, -100px); }
+  70% { transform: translate(-50%, -300px); }
+  100% { transform: translate(-50%, -200px); }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translate(-260px, -50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate(-300px, -50%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate(-260px, -50%);
+  }
 }

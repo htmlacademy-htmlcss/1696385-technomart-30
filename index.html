@@ -7,7 +7,7 @@
     href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:wght@400;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="stylesheet" href="./css/style.css">
   <link rel="icon" href="./favicon.ico">
   <link rel="icon" href="./favicon/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./favicon/180.png">
@@ -105,7 +105,7 @@
       </div>
       <div class="promo-slider">
         <div class="promo-slider-img">
-          <div class="promo-slider-img-punch promo-slider-img-wrapper">
+          <div class="promo-slider-img-punch promo-slider-img-wrapper slider-active">
             <img class="promo-slider-img-bg" src="./img/slider/img-slider1.jpg" width="620" height="266"
               alt="Профессионал использует перфоратор марки BOSCH на производстве">
             <div class="promo-slider__punch">
@@ -130,8 +130,8 @@
           <button type="button" class="promo-slider-arrow-left slider-btn"></button>
           <button type="button" class="promo-slider-arrow-right slider-btn"></button>
           <div class="promo-slider-pagination">
-            <button type="button" class="promo-slider-pagination-radio radio-back slider-btn"></button>
-            <button type="button" class="promo-slider-pagination-radio radio-next slider-btn active-slider"></button>
+            <button type="button" class="promo-slider-pagination-radio radio-back slider-btn active-radio"></button>
+            <button type="button" class="promo-slider-pagination-radio radio-next slider-btn"></button>
           </div>
         </div>
       </div>
@@ -241,21 +241,21 @@
           <p class="services__text text">Хороший интернет-магазин отличается от плохого не только ценами!&NewLine;Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         </div>
         <div class="services-tabs-pagination">
-          <a class="services-tabs-pagination-index active" href="#tab-1">Доставка</a>
-          <a class="services-tabs-pagination-index" href="#tab-2">Гарантия</a>
-          <a class="services-tabs-pagination-index" href="#tab-3">Кредит</a>
+          <a class="services-tabs-pagination-index delivery active-tab" href="#">Доставка</a>
+          <a class="services-tabs-pagination-index quarantee" href="#">Гарантия</a>
+          <a class="services-tabs-pagination-index credit" href="#">Кредит</a>
         </div>
         <div class="services-description">
-          <div id="tab-1" class="services-tabs-item services-tabs-item-delivery">
+          <div class="services-tabs-item services-tabs-item-delivery services-tabs-item-active">
             <h3 class="services-tabs-item-heading heading">Доставка</h3>
             <p class="services__text text delivery-text-first">Мы с удовольствием доставим ваш товар прямо&NewLine;к вашему подъезду совершенно бесплатно!</p>
             <p class="services__text text delivery-text-second">Ведь мы неплохо заработаем,&NewLine;поднимая его на ваш этаж!</p>
           </div>
-          <div id="tab-2" class="services-tabs-item services-tabs-item-quarantee">
+          <div class="services-tabs-item services-tabs-item-quarantee">
             <h3 class="services-tabs-item-heading heading">Гарантия</h3>
             <p class="services__text text">Если купленный у нас товар поломается или заискрит,&NewLine;а также в случае пожара, спровоцированного его&NewLine;возгоранием, вы всегда можете быть уверены в нашей&NewLine;гарантии. Мы обменяем сгоревший товар на новый.&NewLine;Дом уж восстановите как-нибудь сами.</p>
           </div>
-          <div id="tab-3" class="services-tabs-item services-tabs-item-credit">
+          <div class="services-tabs-item services-tabs-item-credit">
             <h3 class="services-tabs-item-heading heading">Кредит</h3>
             <p class="services__text text credit-text">Залезть в долговую яму стало проще!&NewLine;Кредитные консультанты придут вам на помощь.</p>
             <a class="button services-btn-credit" href="#">Отправить заявку</a>
@@ -360,18 +360,18 @@
     </div>
   </footer>
   <section class="modal">
+    <h2 class="visually-hidden">Ваши данные</h2>
+    <button class="modal-btn" type="button"></button>
     <div class="modal-wrapper">
-      <h2 class="visually-hidden">Ваши данные</h2>
-      <button class="modal-btn" type="button"></button>
       <form class="modal-form" action="https://echo.htmlacademy.ru/" method="GET">
         <ul class="modal-form-list">
           <li class="modal-form-list-item">
             <label class="modal-form-label" for="field-name">Ваше имя:</label>
-            <input class="modal-form-input form-item" type="text" name="your-name" id="field-name" placeholder="  Имя Фамилия" required>
+            <input class="modal-form-input form-item" type="text" name="your-name" id="field-name" placeholder="  Имя Фамилия" autofocus>
           </li>
           <li class="modal-form-list-item">
             <label class="modal-form-label" for="field-email">Ваш e-mail:</label>
-            <input class="modal-form-input form-item" type="email" name="email" id="field-email" placeholder="  email@example.com" required>
+            <input class="modal-form-input form-item" type="email" name="email" id="field-email" placeholder="  email@example.com">
           </li>
           <li class="modal-form-list-item">
             <label class="modal-form-label" for="message">Текст письма:</label>
@@ -388,8 +388,21 @@
   <section class="modal-map">
     <h2 class="visually-hidden">Как до нас добраться</h2>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.598942412363!2d30.32089461559019!3d59.938796869048495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1614621171707!5m2!1sru!2sru" width="943" height="449" style="border:0;" allowfullscreen="" loading="lazy" title="Офис компании по адресу Большая Конюшенная ул., 19, Санкт-Петербург, 191186"></iframe>
-    <button class="modal-btn"></button>
+    <button class="modal-btn map-close"></button>
   </section>
+  <section class="modal-basket">
+    <div class="modal-basket-top">
+      <button class="modal-basket-top-btn-close modal-btn" type="button"></button>
+      <h2 class="modal-basket-top-title">Товар добавлен в корзину!</h2>
+    </div>
+    <div class="modal-basket-bottom">
+      <a class="button modal-basket-bottom-btn-by" href="#">Оформить заказ</a>
+      <button class="button modal-basket-bottom-btn-close" type="button">Продолжить покупки</button>
+    </div>
+  </section>
+
+  <script src="./js/index.js"></script>
+
 </body>
 
 </html>
