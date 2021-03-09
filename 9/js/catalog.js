@@ -9,6 +9,7 @@ buyLinks.forEach(function (evt) {
   evt.addEventListener("click", function(evt) {
     evt.preventDefault();
     modalBasket.classList.add("modal-basket-show");
+    basketLink.classList.add("header-top-link-active");
   });
 });
 
@@ -27,4 +28,16 @@ window.addEventListener("keydown", function (event) {
       modalBasket.classList.remove("modal-basket-show");
     }
   }
+});
+
+// Bookmarks
+
+const bookmarksBtns = document.querySelectorAll(".card__to-bookmark")
+const bookmarksLink = document.querySelector(".header-top-link-bookmarks")
+
+bookmarksBtns.forEach(function (evt) {
+  evt.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    bookmarksLink.classList.add("header-top-link-active");
+  });
 });
