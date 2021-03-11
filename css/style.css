@@ -956,7 +956,7 @@ img {
   right: 294px;
 }
 
-.active-radio {
+.radio-active {
   width: 10px;
   height: 10px;
   border: 2px solid var(--main-bg-color);
@@ -1083,8 +1083,7 @@ img {
   width: 141px;
   height: 38px;
   padding: 9px 42px 11px 32px;
-  margin-left: 12px;
-  margin-bottom: 19px;
+  margin: 0 0 19px 12px;
   background-image: url(../img/buttons/red-button.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -1399,13 +1398,13 @@ img {
   background-color: var(--color-tab-bg-hover-focus);
 }
 
-.active-tab {
+.tab-active {
   color: var(--text-color-blue);
   background-color: var(--main-bg-color);
   box-shadow: none;
 }
 
-.active-tab:hover {
+.tab-active:hover {
   background-color: var(--main-bg-color);
 }
 
@@ -1422,7 +1421,10 @@ img {
 }
 
 .features {
-  justify-self: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .features-title {
@@ -1446,7 +1448,7 @@ img {
   padding: 0;
   padding-left: 37px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
   list-style: none;
 }
 
@@ -1477,8 +1479,8 @@ img {
 
 .features-btn-info {
   display: block;
-  max-width: 220px;
   padding: 11px 41px 9px 40px;
+  margin-right: auto;
 }
 
 .contacts {
@@ -2384,7 +2386,7 @@ img {
 
 .about-product-inner {
   background-color: var(--bg-accent-color);
-  padding-bottom: 69px;
+  padding-bottom: 68px;
 }
 
 .about-product {
@@ -2398,7 +2400,7 @@ img {
   font-weight: var(--font-weight-normal);
   font-family: var(--primary-font);
   color: var(--text-color-black);
-  margin-bottom: 23px;
+  margin-bottom: 24px;
   text-transform: uppercase;
 }
 
