@@ -2,37 +2,37 @@
 const modalLink = document.querySelector(".contacts-btn")
 const modalFeedback = document.querySelector(".modal")
 const btnClose = document.querySelector(".modal-btn")
-const name = modalFeedback.querySelector("[name=your-name]")
+const userName = modalFeedback.querySelector("[name=your-name]")
 const modalForm = modalFeedback.querySelector(".modal-form")
 const email = modalFeedback.querySelector("[name=email]")
 
-modalLink.addEventListener("click", function (event) {
-  event.preventDefault();
+modalLink.addEventListener("click", (evt) => {
+  evt.preventDefault();
   modalFeedback.classList.add("modal-show");
-  name.focus();
+  userName.focus();
 });
 
-btnClose.addEventListener("click", function () {
+btnClose.addEventListener("click", () => {
   modalFeedback.classList.remove("modal-show");
   modalFeedback.classList.remove("modal-error");
 });
 
-window.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
+window.addEventListener("keydown", (evt) => {
+  if (evt.key === "Escape") {
     if (modalFeedback.classList.contains("modal-show")) {
-      event.preventDefault();
+      evt.preventDefault();
       modalFeedback.classList.remove("modal-show");
     }
   }
 });
 
-modalForm.addEventListener("submit", function (event) {
-  if (!name.value || !email.value) {
-    event.preventDefault();
+modalForm.addEventListener("submit", (evt) => {
+  if (!userName.value || !email.value) {
+    evt.preventDefault();
     modalFeedback.classList.remove("modal-error");
     modalFeedback.offsetWidth = modalFeedback.offsetWidth;
     modalFeedback.classList.add("modal-error");
-    name.focus();
+    userName.focus();
   }
 });
 
@@ -41,19 +41,19 @@ const mapLink = document.querySelector(".contacts-map")
 const modalMap = document.querySelector(".modal-map")
 const mapClose = document.querySelector(".map-close")
 
-mapLink.addEventListener("click", function (event) {
-  event.preventDefault();
+mapLink.addEventListener("click", (evt) => {
+  evt.preventDefault();
   modalMap.classList.add("modal-map-show");
 });
 
-mapClose.addEventListener("click", function () {
+mapClose.addEventListener("click", () => {
   modalMap.classList.remove("modal-map-show");
 });
 
-window.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
+window.addEventListener("keydown", (evt) => {
+  if (evt.key === "Escape") {
     if (modalMap.classList.contains("modal-map-show")) {
-      event.preventDefault();
+      evt.preventDefault();
       modalMap.classList.remove("modal-map-show");
     }
   }
@@ -65,105 +65,93 @@ const modalBasket = document.querySelector(".modal-basket")
 const basketClose = document.querySelector(".modal-basket-top-btn-close")
 const continueBuy = document.querySelector(".modal-basket-bottom-btn-close")
 const basketLink = document.querySelector(".header-top-link-basket")
-const cardButtons = document.querySelectorAll(".card__buttons")
 
-buyLinks.forEach(function (evt) {
-  evt.addEventListener("click", function(evt) {
+Array.from(buyLinks).forEach((link) => {
+  link.addEventListener("click", (evt) => {
     evt.preventDefault();
     modalBasket.classList.add("modal-basket-show");
     basketLink.classList.add("header-top-link-active");
   });
 });
 
-basketClose.addEventListener("click", function () {
+basketClose.addEventListener("click", () => {
   modalBasket.classList.remove("modal-basket-show");
 });
 
-continueBuy.addEventListener("click", function () {
+continueBuy.addEventListener("click", () => {
   modalBasket.classList.remove("modal-basket-show");
 });
 
-window.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
+window.addEventListener("keydown", (evt) => {
+  if (evt.key === "Escape") {
     if (modalBasket.classList.contains("modal-basket-show")) {
-      event.preventDefault();
+      evt.preventDefault();
       modalBasket.classList.remove("modal-basket-show");
     }
   }
 });
 
 // Slider promo
-const radio1 = document.querySelector(".radio-back")
-const radio2 = document.querySelector(".radio-next")
-const arrowBack = document.querySelector(".promo-slider-arrow-left")
-const arrowNext = document.querySelector(".promo-slider-arrow-right")
-const slider1 = document.querySelector(".promo-slider-img-punch")
-const slider2 = document.querySelector(".promo-slider-img-drill")
 
-radio1.addEventListener("click", function () {
-  slider2.classList.remove("slider-active");
-  slider1.classList.add("slider-active");
-  radio2.classList.remove("active-radio");
-  radio1.classList.add("active-radio");
+const allSlide = document.querySelectorAll(".promo-slider-img-wrapper")
+const allPag = document.querySelectorAll(".promo-slider-pagination-radio")
+const allArrow = document.querySelectorAll(".slider-btn")
+
+const removeSliderActiveClass = () => {
+  Array.from(allSlide).forEach((slide) => {
+    slide.classList.remove("slider-active");
+  });
+};
+
+const removePaginationActiveClass = () => {
+  Array.from(allPag).forEach((pag) => {
+    pag.classList.remove("radio-active");
+  });
+};
+
+Array.from(allArrow).forEach((arrow, index) => {
+  arrow.addEventListener("click", (evt) => {
+    removeSliderActiveClass();
+    removePaginationActiveClass();
+    allSlide[index].classList.add("slider-active");
+    allPag[index].classList.add("radio-active");
+  });
 });
 
-radio2.addEventListener("click", function () {
-  slider1.classList.remove("slider-active");
-  slider2.classList.add("slider-active");
-  radio1.classList.remove("active-radio");
-  radio2.classList.add("active-radio");
-});
-
-arrowNext.addEventListener("click", function () {
-  slider1.classList.remove("slider-active");
-  slider2.classList.add("slider-active");
-  radio1.classList.remove("active-radio");
-  radio2.classList.add("active-radio");
-});
-
-arrowBack.addEventListener("click", function () {
-  slider2.classList.remove("slider-active");
-  slider1.classList.add("slider-active");
-  radio2.classList.remove("active-radio");
-  radio1.classList.add("active-radio");
+Array.from(allPag).forEach((pag, index) => {
+  pag.addEventListener("click", (evt) => {
+    removeSliderActiveClass();
+    removePaginationActiveClass();
+    allPag[index].classList.add("radio-active");
+    allSlide[index].classList.add("slider-active");
+  });
 });
 
 // Slider services
-const deliveryBtn = document.querySelector(".delivery")
-const quaranteeBtn = document.querySelector(".quarantee")
-const creditBtn = document.querySelector(".credit")
-const deliveryDscr = document.querySelector(".services-tabs-item-delivery")
-const quaranteeDscr = document.querySelector(".services-tabs-item-quarantee")
-const creditDscr = document.querySelector(".services-tabs-item-credit")
 
-quaranteeBtn.addEventListener("click", function (event) {
-  event.preventDefault();
-  quaranteeBtn.classList.add("active-tab");
-  quaranteeDscr.classList.add("services-tabs-item-active");
-  deliveryBtn.classList.remove("active-tab");
-  deliveryDscr.classList.remove("services-tabs-item-active");
-  creditBtn.classList.remove("active-tab");
-  creditDscr.classList.remove("services-tabs-item-active");
-});
+const allBtn = document.querySelectorAll(".services-tabs-pagination-index")
+const allTab = document.querySelectorAll(".services-tabs-item")
 
-creditBtn.addEventListener("click", function (event) {
-  event.preventDefault();
-  creditBtn.classList.add("active-tab");
-  creditDscr.classList.add("services-tabs-item-active");
-  deliveryBtn.classList.remove("active-tab");
-  deliveryDscr.classList.remove("services-tabs-item-active");
-  quaranteeBtn.classList.remove("active-tab");
-  quaranteeDscr.classList.remove("services-tabs-item-active");
-});
+const removeTabActiveClass = () => {
+  Array.from(allTab).forEach((tab) => {
+    tab.classList.remove("services-tabs-item-active");
+  });
+};
 
-deliveryBtn.addEventListener("click", function (event) {
-  event.preventDefault();
-  deliveryBtn.classList.add("active-tab");
-  deliveryDscr.classList.add("services-tabs-item-active");
-  creditBtn.classList.remove("active-tab");
-  creditDscr.classList.remove("services-tabs-item-active");
-  quaranteeBtn.classList.remove("active-tab");
-  quaranteeDscr.classList.remove("services-tabs-item-active");
+const removeBtnActiveClass = () => {
+  Array.from(allBtn).forEach((btn) => {
+    btn.classList.remove("tab-active");
+  });
+};
+
+Array.from(allBtn).forEach((btn, index) => {
+  btn.addEventListener("click", (evt) => {
+    evt.preventDefault();
+    removeTabActiveClass();
+    removeBtnActiveClass();
+    allBtn[index].classList.add("tab-active");
+    allTab[index].classList.add("services-tabs-item-active");
+  });
 });
 
 // Bookmarks
@@ -171,8 +159,8 @@ deliveryBtn.addEventListener("click", function (event) {
 const bookmarksBtns = document.querySelectorAll(".card__to-bookmark")
 const bookmarksLink = document.querySelector(".header-top-link-bookmarks")
 
-bookmarksBtns.forEach(function (evt) {
-  evt.addEventListener("click", function(evt) {
+Array.from(bookmarksBtns).forEach((bookmark) => {
+  bookmark.addEventListener("click", (evt) => {
     evt.preventDefault();
     bookmarksLink.classList.add("header-top-link-active");
   });

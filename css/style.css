@@ -956,7 +956,7 @@ img {
   right: 294px;
 }
 
-.active-radio {
+.radio-active {
   width: 10px;
   height: 10px;
   border: 2px solid var(--main-bg-color);
@@ -1398,13 +1398,13 @@ img {
   background-color: var(--color-tab-bg-hover-focus);
 }
 
-.active-tab {
+.tab-active {
   color: var(--text-color-blue);
   background-color: var(--main-bg-color);
   box-shadow: none;
 }
 
-.active-tab:hover {
+.tab-active:hover {
   background-color: var(--main-bg-color);
 }
 
