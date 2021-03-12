@@ -943,7 +943,6 @@ img {
   border: none;
   cursor: pointer;
   background-color: var(--main-bg-color);
-
 }
 
 .radio-back {
@@ -1169,7 +1168,7 @@ img {
   height: 70px;
   top: 0;
   right: 0;
-  background-image: url(../img/catalog/catalog-new.svg);
+  background-image: url(../img/content-img/catalog-new.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
 }
